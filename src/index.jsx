@@ -48,7 +48,7 @@ const checkOverflowVisible = function checkOverflowVisible(component, parent) {
     ({ top: parentTop, height: parentHeight } = defaultBoundingClientRect);
   }
 
-  const windowInnerHeight = window.innerHeight || document.documentElement.clientHeight;
+  const windowInnerHeight = document.body.clientHeight || window.innerHeight || document.documentElement.clientHeight;
 
   // calculate top and height of the intersection of the element's scrollParent and viewport
   const intersectionTop = Math.max(parentTop, 0); // intersection's top relative to viewport
